@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:58:34 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/14 21:16:00 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:18:08 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	ft_putnbr_fd(int n, int fd)
 		n /= 10;
 	}
 	while (--i > 0)
-		write(fd, arr[i], sizeof(char));
+		write(fd, &arr[i], sizeof(char));
 }

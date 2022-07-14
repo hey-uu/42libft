@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:56:39 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/14 21:15:51 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:18:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putendl_fd(char *s, int fd)
 	if (!s)
 		return ;
 	ft_putstr_fd(s, fd);
-	write(fd, '\n', sizeof(char));
+	write(fd, "\n", sizeof(char));
 }
