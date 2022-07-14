@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 11:46:51 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/07/14 20:56:25 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/07/14 21:13:58 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,11 @@ FILES = ft_atoi \
 		ft_itoa \
 		ft_strmapi \
 		ft_striteri \
-		ft_putchar \
-		ft_putstr
+		ft_putchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd
+		
 		# ft_lstadd_back \
 		# ft_lstadd_front \
 		# ft_lstclear \
