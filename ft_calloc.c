@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:41:19 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/14 21:38:14 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:58:02 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ void	*ft_calloc(size_t count, size_t size)
 	return ((void *) new);
 }
 
-#include <stdio.h>
-#include <limits.h>
-#include <stdlib.h>
-int main(void)
-{
-	char *s = malloc(0);
-	if (s == NULL)
-		printf("ft_calloc retuns NULL!\n");
-	else
-		printf("ft_calloc doesn't return NULL!\n");
-	char *ans = calloc(1, 0);
-	if (ans == NULL)
-		printf("calloc retuns NULL!\n");
-	else
-		printf("calloc doesn't return NULL!\n");
+// #include <stdio.h>
+// #include <limits.h>
+// #include <stdlib.h>
+// int main(void)
+// {
+// 	char *s = malloc(0);
+// 	if (s == NULL)
+// 		printf("ft_calloc retuns NULL!\n");
+// 	else
+// 		printf("ft_calloc doesn't return NULL!\n");
+// 	char *ans = calloc(1, 0);
+// 	if (ans == NULL)
+// 		printf("calloc retuns NULL!\n");
+// 	else
+// 		printf("calloc doesn't return NULL!\n");
 		
-}
+// }
