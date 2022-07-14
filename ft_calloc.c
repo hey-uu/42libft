@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:41:19 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/14 21:58:02 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:59:23 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,4 @@ void	*ft_calloc(size_t count, size_t size)
 // 		printf("calloc retuns NULL!\n");
 // 	else
 // 		printf("calloc doesn't return NULL!\n");
-		
 // }
