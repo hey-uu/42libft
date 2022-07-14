@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:41:19 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/09 11:37:11 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/14 21:38:14 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			total;
 	size_t			i;
 
-	if (size > SIZE_MAX / count)
+	if (!count || (count > 0 && size > SIZE_MAX / count))
 		return (NULL);
 	total = count * size;
-	new = (unsigned char *)malloc(total);
+	new = malloc(total);
 	if (!new)
 		return (NULL);
 	i = -1;
@@ -29,13 +29,21 @@ void	*ft_calloc(size_t count, size_t size)
 		new[i] = 0;
 	return ((void *) new);
 }
-/*
+
 #include <stdio.h>
 #include <limits.h>
 #include <stdlib.h>
 int main(void)
 {
-	printf("%lu\n", sizeof(size_t));
-	printf("%lu", SIZE_MAX);
+	char *s = malloc(0);
+	if (s == NULL)
+		printf("ft_calloc retuns NULL!\n");
+	else
+		printf("ft_calloc doesn't return NULL!\n");
+	char *ans = calloc(1, 0);
+	if (ans == NULL)
+		printf("calloc retuns NULL!\n");
+	else
+		printf("calloc doesn't return NULL!\n");
+		
 }
-*/
