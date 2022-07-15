@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 10:03:28 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/14 10:16:01 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 12:32:47 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static t_bool	is_fill_split_ok(char **res, char const *s, char c)
 			if (!res[res_idx])
 			{
 				ft_free_all(res, res_idx);
-				return (false);
+				return (FALSE);
 			}
 			ft_strlcpy(res[res_idx], &s[i], len + 1);
 			i += (len - 1);
@@ -70,7 +70,7 @@ static t_bool	is_fill_split_ok(char **res, char const *s, char c)
 		}
 	}
 	res[res_idx] = NULL;
-	return (true);
+	return (TRUE);
 }
 
 char	**ft_split(char const *s, char c)

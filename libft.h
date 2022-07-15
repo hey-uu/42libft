@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:34:17 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 10:12:01 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 12:32:47 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 typedef enum e_bool
 {
-	true = 1,
-	false = 0
+	TRUE = 1,
+	FALSE = 0
 }	t_bool;
 
 typedef struct s_list
