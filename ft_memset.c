@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 10:18:05 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/09 14:42:06 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 11:56:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 11:46:51 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/07/15 10:54:26 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/07/15 12:18:06 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ BONUS_FILES = ft_lstadd_back \
 			ft_lstmap
 
 SRCS = $(addsuffix .c, $(FILES))
-OBJCS = $(addsuffix .o,$(FILES))
+OBJCS = $(addsuffix .o, $(FILES))
 BONUS_SRCS = $(addsuffix .c, $(BONUS_FILES))
 BONUS_OBJCS = $(addsuffix .o, $(BONUS_FILES))
 
