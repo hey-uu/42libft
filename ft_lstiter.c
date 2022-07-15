@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:30:39 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/13 22:38:03 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 17:38:51 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*tem;
-	
+
 	if (!lst || !f)
 		return ;
 	while (lst)
