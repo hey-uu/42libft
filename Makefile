@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 11:46:51 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/07/15 12:39:07 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/07/15 17:13:16 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,6 @@ else
 	TOTAL_OBJCS = $(OBJCS)
 endif
 
-$(info total objects: $(TOTAL_OBJCS))
 $(NAME) : $(TOTAL_OBJCS)
 	$(AR) $(ARFLAGS) $@ $^
 
