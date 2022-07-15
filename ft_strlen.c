@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 10:29:41 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/11 09:22:54 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

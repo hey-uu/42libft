@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:49:50 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/11 18:15:24 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 static int	ft_abs(int n)
 {

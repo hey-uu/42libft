@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 14:07:26 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/11 08:23:14 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 08:01:45 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/08 21:39:13 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
