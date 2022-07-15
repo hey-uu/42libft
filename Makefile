@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 11:46:51 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/07/14 21:13:58 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/07/15 10:54:26 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar
 ARFLAGS = crs
 RM = rm
-RMFLAGS = -rf
+RMFLAGS = -f
 
 FILES = ft_atoi \
 		ft_bzero \
@@ -54,38 +54,46 @@ FILES = ft_atoi \
 		ft_putendl_fd \
 		ft_putnbr_fd
 		
-		# ft_lstadd_back \
-		# ft_lstadd_front \
-		# ft_lstclear \
-		# ft_lstdelone \
-		# ft_lstiter \
-		# ft_lstnew \
-		# ft_lstsize
+BONUS_FILES = ft_lstadd_back \
+		 	ft_lstadd_front \
+			ft_lstclear \
+			ft_lstdelone \
+			ft_lstiter \
+			ft_lstnew \
+			ft_lstsize \
+			ft_lstlast \
+			ft_lstmap
 
-SRCS_DIR = ./
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
+SRCS = $(addsuffix .c, $(FILES))
+OBJCS = $(addsuffix .o,$(FILES))
+BONUS_SRCS = $(addsuffix .c, $(BONUS_FILES))
+BONUS_OBJCS = $(addsuffix .o, $(BONUS_FILES))
 
-OBJCS_DIR = ./
-OBJCS = $(addprefix $(OBJCS_DIR), $(addsuffix .o,$(FILES)))
+ifdef WITH_BONUS
+	TOTAL_OBJCS = $(OBJCS) $(BONUS_OBJCS)
+else
+	TOTAL_OBJCS = $(OBJCS)
+endif
 
-INC = ./
-
-$(NAME) : $(OBJCS)
+$(NAME) : $(TOTAL_OBJCS)
 	$(AR) $(ARFLAGS) $@ $^
 
 %.o : %.c
-	$(CC) -c $(CFLAGS) -I$(INC) $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
+
+bonus :
+	make WITH_BONUS=1 all
 
 all : $(NAME)
 
 clean :
-	$(RM) $(RMFLAGS) $(OBJCS)
+	$(RM) $(RMFLAGS) $(OBJCS) $(BONUS_OBJCS)
 
 fclean : clean
 	$(RM) $(RMFLAGS) $(NAME)
 
 re : 
-	make fclean 
+	make fclean
 	make all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus

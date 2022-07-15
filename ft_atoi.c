@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:43:12 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/11 07:51:32 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/15 10:55:47 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@ static int	ft_isspace(const char c)
 
 static int	ft_numcmp(long long a, long long b)
 {
-	if (a > b)
-		return (1);
-	else if (a == b)
-		return (0);
-	else
-		return (-1);
+	return (a-b);
+// 	if (a > b)
+// 		return (1);
+// 	else if (a == b)
+// 		return (0);
+// 	else
+// 		return (-1);
+// 
 }
 
 static long long	ft_strtoll(int sign, const char *str)
