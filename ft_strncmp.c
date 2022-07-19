@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 15:34:12 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:23:01 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-	printf("answer: %d\n", strncmp("a","",6));
-	printf("my func: %d\n", ft_strncmp("a", "", 6));
-	printf("answer: %d\n", strncmp("","a",6));
-	printf("my func: %d\n", ft_strncmp("", "a", 6));
-	printf("answer: %d\n", strncmp("","",0));
-	printf("my func: %d\n", ft_strncmp("", "", 0));
-	printf("answer: %d\n", strncmp("","",6));
-	printf("my func: %d\n", ft_strncmp("", "", 6));
-}
-*/

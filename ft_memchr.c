@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 16:42:49 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/09 14:22:28 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:22:04 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (NULL);
 	return ((void *) s2);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-	printf("\nmy func:\n");
-	printf("%s\n\n", (char *)ft_memchr((void *)0, '\xde', 15));
-	printf("aswer:\n");
-	printf("%s\n\n", (char *)memchr("asdf", '\xde', 15));
-	
-	printf("\nmy func:\n");
-	int arr[10] = {0, 1, 2, 3, 4,5 ,6 ,7 ,8, 9};
-	for (int i = 0 ; i < 4 ; i++)
-		printf("%d ", *((int *)ft_memchr(arr, 4, 10 * sizeof(int))+i));
-	printf("\naswer:\n");
-	for (int i = 0 ; i < 4 ; i++)
-		printf("%d ", *((int *)memchr(arr, 4, 10 * sizeof(int))+i));
-}
-*/

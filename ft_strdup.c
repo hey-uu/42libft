@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:24:46 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:22:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,3 @@ char	*ft_strdup(const char *s1)
 	new[i] = '\0';
 	return (new);
 }
-//Don't Repeat yourself
-/*
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-   char *str;
-   char *tmp = "HAHAHA \0 tu me vois pas !";
-
-   str = ft_strdup(tmp);
-   if (strcmp(str, tmp))
-      printf("1");
-   free(str);
-   printf("0");
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 10:03:28 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:22:28 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,14 +86,3 @@ char	**ft_split(char const *s, char c)
 		return (res);
 	return (NULL);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char *s = "      split       this for   me  !       ";
-// 	char **result = ft_split(s, ' ');
-// 	while (*result)
-// 	{
-// 		printf("%s\n", *result++);
-// 	}
-// }

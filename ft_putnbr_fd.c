@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:58:34 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/14 22:18:56 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 14:09:37 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 	tem = (long) n;
 	if (tem == 0)
 		write(fd, "0", sizeof(char));
-	if (tem < 0)
+	else if (tem < 0)
 	{
 		tem *= -1;
 		write(fd, "-", sizeof(char));

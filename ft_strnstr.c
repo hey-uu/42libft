@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:31:04 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 15:23:05 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-	char *empty = (char *)"";
-	printf("ans: %s\n", strnstr("adfadf","fad",5));
-	printf("mine: %s\n\n", ft_strnstr("adfadf", "fad",5));
-	printf("ans: %s\n", strnstr(empty, "", -1));	
-	printf("mine: %s\n\n", ft_strnstr(empty, "", -1));
-	printf("ans: %s\n", strnstr(empty, "", 0)); 
-	printf("mine: %s\n\n", ft_strnstr(empty, "", 0)); 
-}
-*/
