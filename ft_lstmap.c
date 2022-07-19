@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:32:53 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:43:52 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (FT_NULL);
 	new = ft_lstnew(f(lst->content));
 	if (!new)
-		return ((void *) 0);
+		return (FT_NULL);
 	node = new;
 	while (lst->next)
 	{
@@ -31,7 +31,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!node)
 		{
 			ft_lstclear(&new, del);
-			return ((void *) 0);
+			return (FT_NULL);
 		}
 	}
 	return (new);

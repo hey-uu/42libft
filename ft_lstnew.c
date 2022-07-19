@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 10:50:21 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 12:03:58 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:43:52 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ t_list	*ft_lstnew(void *content)
 
 	new = malloc(sizeof(t_list));
 	if (!new)
-		return ((void *) 0);
+		return (FT_NULL);
 	new->content = content;
-	new->next = (void *) 0;
+	new->next = FT_NULL;
 	return (new);
 }
