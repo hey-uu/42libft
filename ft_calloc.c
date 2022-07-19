@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:41:19 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 14:11:23 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			i;
 
 	if (count > 0 && size > FT_SIZE_MAX / count)
-		return (NULL);
+		return (FT_NULL);
 	total = count * size;
 	new = malloc(total);
 	if (!new)
-		return (NULL);
-	i = -1;
-	while (++i < total)
-		new[i] = 0;
+		return (FT_NULL);
+	i = 0;
+	while (i < total)
+		new[i++] = 0;
 	return ((void *) new);
 }

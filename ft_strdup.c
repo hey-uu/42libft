@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:24:46 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:22:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 char	*ft_strdup(const char *s1)
 {
-	const int		len = ft_strlen(s1);
+	const size_t		len = ft_strlen(s1);
 	char			*new;
-	int				i;
+	size_t				i;
 
 	new = malloc(len + 1);
 	if (!new)
-		return (NULL);
-	i = -1;
-	while (s1[++i])
+		return (FT_NULL);
+	i = 0;
+	while (s1[i])
+	{
 		new[i] = s1[i];
+		i++;
+	}
 	new[i] = '\0';
 	return (new);
 }

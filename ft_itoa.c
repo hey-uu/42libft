@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:49:50 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
-		return (NULL);
+		return (FT_NULL);
 	i = (int) len;
 	if (n == 0)
 		res[0] = '0';

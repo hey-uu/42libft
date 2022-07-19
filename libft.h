@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:34:17 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:05:12 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:41:48 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 # define FT_SIZE_MAX 9223372036854775807
 # define FT_LONG_MAX 9223372036854775807L
+# define FT_NULL	 (void *) 0
 
 typedef enum e_bool
 {

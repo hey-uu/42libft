@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:31:04 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:23:05 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			return ((char *)(haystack + i));
 		i++;
 	}
-	return (NULL);
+	return (FT_NULL);
 }

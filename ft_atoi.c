@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:43:12 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:05:02 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 16:45:46 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_isspace(const char c)
 {
-	return ((c >= 9 && c <= 13) || c == 32);
+	return ((c >= '\t' && c <= '\r') || c == ' ');
 }
 
 static long	ft_strtol(int sign, const char *str)

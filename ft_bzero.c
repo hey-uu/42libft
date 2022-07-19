@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 16:00:44 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 11:43:33 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:40:53 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(ptr + i) = 0;
+		ptr[i] = 0;
 		i++;
 	}
 }

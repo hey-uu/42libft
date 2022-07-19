@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 21:06:56 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*ret;
 
-	if (!s)
-		return (NULL);
+	if (!s || !f)
+		return (FT_NULL);
 	len = ft_strlen(s);
 	ret = malloc(sizeof(char) * (len + 1));
 	if (!ret)
-		return (NULL);
+		return (FT_NULL);
 	i = 0;
 	while (i < len)
 	{

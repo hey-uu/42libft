@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 08:01:45 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:23:25 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	slen;
 
 	if (!s)
-		return (NULL);
+		return (FT_NULL);
 	slen = ft_strlen(s);
 	if (len == 0 || start >= slen)
 		sublen = 0;
@@ -32,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	sub = (char *)malloc(sizeof(char) * (sublen + 1));
 	if (!sub)
-		return (NULL);
+		return (FT_NULL);
 	ft_strlcpy(sub, s + start, sublen + 1);
 	return (sub);
 }

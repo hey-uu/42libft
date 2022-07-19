@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 10:03:28 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:22:28 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static t_bool	is_fill_split_ok(char **res, char const *s, char c)
 			res_idx++;
 		}
 	}
-	res[res_idx] = NULL;
+	res[res_idx] = FT_NULL;
 	return (TRUE);
 }
 
@@ -79,10 +79,10 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 
 	if (!s)
-		return (NULL);
+		return (FT_NULL);
 	word_count = get_wordcount(s, c);
 	res = malloc(sizeof(char *) * (word_count + 1));
 	if (res && is_fill_split_ok(res, s, c))
 		return (res);
-	return (NULL);
+	return (FT_NULL);
 }

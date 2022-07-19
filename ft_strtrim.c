@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 16:23:01 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:23:19 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *s2)
 	char	*s;
 
 	if (!s1 || !s2)
-		return (NULL);
+		return (FT_NULL);
 	left = 0;
 	if (!*s1)
 		len = 0;
@@ -56,7 +56,7 @@ char	*ft_strtrim(char const *s1, char const *s2)
 		ft_findidx(s1, s2, &left, &len);
 	s = (char *)malloc(sizeof(char) * (len + 1));
 	if (!s)
-		return (NULL);
+		return (FT_NULL);
 	ft_strlcpy(s, s1 + left, len + 1);
 	return (s);
 }
