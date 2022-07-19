@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 11:46:51 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/07/15 19:07:59 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/07/19 10:41:08 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,7 +82,6 @@ $(NAME) : $(TOTAL_OBJCS)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 bonus :
-	sleep 1
 	make WITH_BONUS=1 all
 
 all : $(NAME)
