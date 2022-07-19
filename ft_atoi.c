@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:43:12 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 17:43:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:49:18 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ static int	ft_numcmp(long long a, long long b)
 		return (-1);
 }
 
-static long long	ft_strtoll(int sign, const char *str)
+static long	ft_strtol(int sign, const char *str)
 {
-	long long	num;
-	int			i;
-	int			check;
+	long	num;
+	int		i;
+	int		check;
 
 	i = -1;
 	num = 0;
@@ -65,7 +65,7 @@ int	ft_atoi(const char *str)
 			sign = -1;
 		str++;
 	}
-	return ((int) ft_strtoll(sign, str));
+	return ((int) ft_strtol(sign, str));
 }
 /*
 #include <stdio.h> 
