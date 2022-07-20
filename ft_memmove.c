@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:48:09 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:22:17 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 08:00:54 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,12 @@ void	*ft_memmove(void *dst, const void *str, size_t len)
 	}
 	else if (dst < str)
 	{
-		i = -1;
-		while (++i < len)
+		i = 0;
+		while (i < len)
+		{
 			dst2[i] = str2[i];
+			i++;
+		}
 	}
 	return (dst);
 }

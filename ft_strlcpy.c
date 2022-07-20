@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 14:07:26 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 15:22:53 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 08:16:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while (src[i] && dstsize && i < (dstsize - 1))
+	while (src[i] && dstsize && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;

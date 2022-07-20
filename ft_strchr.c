@@ -6,21 +6,21 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 14:55:56 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/20 07:43:52 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 09:11:01 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./stdlib.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	const char	new_c = (char) c;
-	char		*str;
+	size_t		i;
 
-	str = (char *) s;
-	while (*str && *str != new_c)
-		str++;
-	if (*str != new_c)
+	i = 0;
+	while (s[i] && s[i] != new_c)
+		i++;
+	if (s[i] != new_c)
 		return (FT_NULL);
-	return (str);
+	return ((char *)s + i);
 }

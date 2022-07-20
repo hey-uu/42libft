@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 11:02:27 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/15 11:57:19 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 07:58:29 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	count;
+	int	lstsize;
 
-	count = 0;
+	lstsize = 0;
 	while (lst)
 	{
-		count++;
+		lstsize++;
 		lst = lst->next;
 	}
-	return (count);
+	return (lstsize);
 }

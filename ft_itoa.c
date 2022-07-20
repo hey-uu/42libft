@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:49:50 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 08:07:46 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,12 @@ static int	ft_abs(int n)
 		return (n);
 }
 
-static int	ft_getlen(int n)
+static size_t	ft_getlen(int n)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
-	if (n == 0)
-		len = 1;
-	if (n < 0)
+	if (n <= 0)
 		len = 1;
 	while (n != 0)
 	{
@@ -39,18 +37,18 @@ static int	ft_getlen(int n)
 
 char	*ft_itoa(int n)
 {
-	const int	len = ft_getlen(n);
-	int			i;
-	char		*res;
+	const size_t	len = ft_getlen(n);
+	size_t			i;
+	char			*res;
 
-	res = malloc(sizeof(char) * (len + 1));
+	res = malloc(len + 1);
 	if (!res)
 		return (FT_NULL);
-	i = (int) len;
 	if (n == 0)
 		res[0] = '0';
 	else if (n < 0)
 		res[0] = '-';
+	i = len;
 	while (n != 0)
 	{
 		res[--i] = ft_abs(n % 10) + '0';

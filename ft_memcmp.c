@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 17:09:37 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 12:18:38 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 08:00:08 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	const unsigned char	*us2 = (unsigned char *) s2;
 	size_t				i;
 
-	i = -1;
-	while (++i < n)
+	i = 0;
+	while (i < n)
+	{
 		if (us1[i] != us2[i])
 			return (us1[i] - us2[i]);
+		i++;
+	}
 	return (0);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 10:50:21 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/20 07:43:52 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/07/20 07:57:32 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/07/20 09:27:29 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*new;
+	t_list	*new_lst;
 
-	new = malloc(sizeof(t_list));
-	if (!new)
+	new_lst = malloc(sizeof(t_list));
+	if (!new_lst)
 		return (FT_NULL);
-	new->content = content;
-	new->next = FT_NULL;
-	return (new);
+	new_lst->content = content;
+	new_lst->next = FT_NULL;
+	return (new_lst);
 }

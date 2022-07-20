@@ -6,13 +6,13 @@
 #    By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 11:46:51 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/07/19 15:25:28 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/07/20 09:33:56 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror 
 AR = ar
 ARFLAGS = crs

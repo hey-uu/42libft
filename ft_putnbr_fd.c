@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 20:58:34 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/19 14:09:37 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 08:08:37 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	ft_putnbr_fd(int n, int fd)
 
 	tem = (long) n;
 	if (tem == 0)
-		write(fd, "0", sizeof(char));
+		write(fd, "0", 1);
 	else if (tem < 0)
 	{
 		tem *= -1;
-		write(fd, "-", sizeof(char));
+		write(fd, "-", 1);
 	}
 	i = 0;
 	while (tem > 0)
@@ -33,5 +33,5 @@ void	ft_putnbr_fd(int n, int fd)
 		tem /= 10;
 	}
 	while (--i >= 0)
-		write(fd, &arr[i], sizeof(char));
+		write(fd, &arr[i], 1);
 }

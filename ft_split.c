@@ -6,28 +6,31 @@
 /*   By: hyeyukim <hyeyukim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 10:03:28 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/07/20 07:42:19 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/07/20 08:11:30 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_wordcount(char const *s, char c)
+static size_t	get_wordcount(char const *s, char c)
 {
-	int	word_count;
-	int	i;
+	size_t	word_count;
+	size_t	i;
 
 	word_count = 0;
-	i = -1;
-	while (s[++i])
+	i = 0;
+	while (s[i])
+	{
 		if ((s[i] != c) && (s[i + 1] == '\0' || s[i + 1] == c))
 			word_count++;
+		i++;
+	}
 	return (word_count);
 }
 
-static int	ft_getlen(char const *s, char c)
+static size_t	ft_getlen(char const *s, char c)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] && s[len] != c)
@@ -35,30 +38,30 @@ static int	ft_getlen(char const *s, char c)
 	return (len);
 }
 
-static void	ft_free_all(char **res, int pos)
+static void	ft_free_all(char **res, size_t pos)
 {
-	int	i;
+	size_t	i;
 
-	i = -1;
-	while (++i < pos)
-		free(res[i]);
+	i = 0;
+	while (i < pos)
+		free(res[i++]);
 	free(res);
 }
 
 static t_bool	is_fill_split_ok(char **res, char const *s, char c)
 {
-	int	len;
-	int	i;
-	int	res_idx;
+	size_t	len;
+	size_t	i;
+	size_t	res_idx;
 
 	res_idx = 0;
-	i = -1;
-	while (s[++i])
+	i = 0;
+	while (s[i])
 	{
 		if (s[i] != c)
 		{
 			len = ft_getlen(&s[i], c);
-			res[res_idx] = malloc(sizeof(char) * (len + 1));
+			res[res_idx] = malloc(len + 1);
 			if (!res[res_idx])
 			{
 				ft_free_all(res, res_idx);
@@ -68,6 +71,7 @@ static t_bool	is_fill_split_ok(char **res, char const *s, char c)
 			i += (len - 1);
 			res_idx++;
 		}
+		i++;
 	}
 	res[res_idx] = FT_NULL;
 	return (TRUE);
@@ -75,7 +79,7 @@ static t_bool	is_fill_split_ok(char **res, char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		word_count;
+	size_t	word_count;
 	char	**res;
 
 	if (!s)
